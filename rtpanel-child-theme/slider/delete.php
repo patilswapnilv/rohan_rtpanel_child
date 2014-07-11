@@ -6,7 +6,7 @@ if(isset($_GET['action'])){
 		$filename = $_GET['filename'];
 		$path = '../images/'.$filename;
 		unlink($path);
-		$newURL = '../../../../wp-admin/admin.php?page=home_slider';
+		$newURL = '../../../../wp-admin/themes.php?page=rtp_home_slider_child';
 		header('Location: '.$newURL);
 		}
 	if($action == 'add'){
@@ -29,7 +29,7 @@ if(isset($_GET['action'])){
     } else {
       move_uploaded_file($_FILES["file"]["tmp_name"],
       "../images/" . $_FILES["file"]["name"]);
-	  $newURL = '../../../../wp-admin/admin.php?page=home_slider';
+	  $newURL = '../../../../wp-admin/themes.php?page=rtp_home_slider_child';
   		header('Location: '.$newURL);
     }
   }
